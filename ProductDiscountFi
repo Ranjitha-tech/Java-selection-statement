@@ -1,0 +1,17 @@
+@FunctionalInterface
+interface Discount {
+    double apply(double price);
+}
+
+public class ProductDiscountFI {
+
+    public static void main(String[] args) {
+
+        Discount festiveDiscount = price -> price - (price * 0.25);
+
+        double productPrice = 3200;
+
+        System.out.println("Original Price : " + productPrice);
+        System.out.println("Final Price    : " + festiveDiscount.apply(productPrice));
+    }
+}
