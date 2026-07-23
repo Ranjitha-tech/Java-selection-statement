@@ -1,0 +1,15 @@
+@FunctionalInterface
+interface BonusCalculator {
+    double calculate(double salary);
+}
+
+public class BonusCalculatorFI {
+    public static void main(String[] args) {
+
+        BonusCalculator bonus = salary -> salary * 0.15;
+
+        double salary = 50000;
+        System.out.println("Salary : " + salary);
+        System.out.println("Bonus  : " + bonus.calculate(salary));
+    }
+}
