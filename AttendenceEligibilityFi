@@ -1,0 +1,20 @@
+@FunctionalInterface
+interface AttendanceRule {
+    boolean eligible(double attendance);
+}
+
+public class AttendanceEligibilityFI {
+
+    public static void main(String[] args) {
+
+        AttendanceRule rule =
+                attendance -> attendance >= 75;
+
+        double attendance = 81.4;
+
+        if(rule.eligible(attendance))
+            System.out.println("Eligible for Semester Exam");
+        else
+            System.out.println("Not Eligible");
+    }
+}
