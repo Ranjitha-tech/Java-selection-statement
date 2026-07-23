@@ -1,0 +1,17 @@
+@FunctionalInterface
+interface BillCalculator {
+    double generate(int units);
+}
+
+public class ElectricityBillFI {
+
+    public static void main(String[] args) {
+
+        BillCalculator bill = units -> units * 8.75;
+
+        int units = 145;
+
+        System.out.println("Units Consumed : " + units);
+        System.out.println("Bill Amount    : ₹" + bill.generate(units));
+    }
+}
