@@ -1,0 +1,17 @@
+@FunctionalInterface
+interface UsernameFormatter {
+    String format(String username);
+}
+
+public class UsernameFormatterFI {
+
+    public static void main(String[] args) {
+
+        UsernameFormatter formatter =
+                username -> username.trim().toLowerCase();
+
+        String username = "   RANJITHA_DEV   ";
+
+        System.out.println(formatter.format(username));
+    }
+}
