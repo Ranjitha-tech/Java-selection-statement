@@ -1,0 +1,28 @@
+final class PayrollCard {
+
+    private final int employeeId;
+    private final String employeeName;
+    private final double salary;
+
+    PayrollCard(int employeeId, String employeeName, double salary) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.salary = salary;
+    }
+
+    void display() {
+        System.out.println("Employee ID : " + employeeId);
+        System.out.println("Employee Name : " + employeeName);
+        System.out.println("Salary : ₹" + salary);
+    }
+}
+
+public class ImmutablePayrollCard {
+
+    public static void main(String[] args) {
+
+        PayrollCard card = new PayrollCard(101, "Riya", 65000);
+
+        card.display();
+    }
+}
