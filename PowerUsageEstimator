@@ -1,0 +1,29 @@
+class Electricity {
+
+    private int units;
+
+    Electricity(int units) {
+        this.units = units;
+    }
+
+    double calculate() {
+
+        if (units <= 100)
+            return units * 2;
+
+        if (units <= 300)
+            return 200 + ((units - 100) * 4);
+
+        return 1000 + ((units - 300) * 6);
+    }
+}
+
+public class PowerUsageEstimator {
+
+    public static void main(String[] args) {
+
+        Electricity bill = new Electricity(420);
+
+        System.out.println("Bill Amount : ₹" + bill.calculate());
+    }
+}
