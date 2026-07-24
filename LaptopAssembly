@@ -1,0 +1,39 @@
+class Laptop {
+
+    private String processor;
+    private int ram;
+    private int storage;
+
+    Laptop processor(String processor) {
+        this.processor = processor;
+        return this;
+    }
+
+    Laptop ram(int ram) {
+        this.ram = ram;
+        return this;
+    }
+
+    Laptop storage(int storage) {
+        this.storage = storage;
+        return this;
+    }
+
+    void show() {
+        System.out.println("Processor : " + processor);
+        System.out.println("RAM : " + ram + " GB");
+        System.out.println("Storage : " + storage + " GB");
+    }
+}
+
+public class LaptopAssembly {
+
+    public static void main(String[] args) {
+
+        new Laptop()
+                .processor("Intel i7")
+                .ram(16)
+                .storage(512)
+                .show();
+    }
+}
