@@ -1,0 +1,31 @@
+class StudentProfile {
+
+    int id;
+    String name;
+
+    StudentProfile(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    StudentProfile(StudentProfile other) {
+        this.id = other.id;
+        this.name = other.name;
+    }
+
+    void print() {
+        System.out.println(id + " - " + name);
+    }
+}
+
+public class ManualCloneProfile {
+
+    public static void main(String[] args) {
+
+        StudentProfile original = new StudentProfile(1, "Ananya");
+
+        StudentProfile duplicate = new StudentProfile(original);
+
+        duplicate.print();
+    }
+}
