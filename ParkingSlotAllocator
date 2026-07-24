@@ -1,0 +1,30 @@
+class ParkingArea {
+
+    private boolean[] slots = new boolean[5];
+
+    void parkVehicle() {
+
+        for (int i = 0; i < slots.length; i++) {
+
+            if (!slots[i]) {
+                slots[i] = true;
+                System.out.println("Allocated Slot : " + (i + 1));
+                return;
+            }
+        }
+
+        System.out.println("Parking Full");
+    }
+}
+
+public class ParkingSlotAllocator {
+
+    public static void main(String[] args) {
+
+        ParkingArea parking = new ParkingArea();
+
+        for (int i = 0; i < 6; i++) {
+            parking.parkVehicle();
+        }
+    }
+}
