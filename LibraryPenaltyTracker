@@ -1,0 +1,25 @@
+class LibraryBook {
+
+    private int overdueDays;
+
+    LibraryBook(int overdueDays) {
+        this.overdueDays = overdueDays;
+    }
+
+    int fine() {
+
+        return overdueDays <= 5
+                ? overdueDays * 2
+                : (5 * 2) + ((overdueDays - 5) * 5);
+    }
+}
+
+public class LibraryPenaltyTracker {
+
+    public static void main(String[] args) {
+
+        LibraryBook book = new LibraryBook(9);
+
+        System.out.println("Fine : ₹" + book.fine());
+    }
+}
