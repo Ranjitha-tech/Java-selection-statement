@@ -1,0 +1,18 @@
+interface EmergencyAlert {
+    void sendAlert(String patientName);
+}
+
+public class HospitalEmergencyAlert {
+
+    public static void main(String[] args) {
+
+        EmergencyAlert alert = new EmergencyAlert() {
+            @Override
+            public void sendAlert(String patientName) {
+                System.out.println("🚑 Emergency Alert Sent for Patient : " + patientName);
+            }
+        };
+
+        alert.sendAlert("Rahul");
+    }
+}
