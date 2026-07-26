@@ -1,0 +1,18 @@
+interface ReminderService {
+    void sendReminder(String studentName);
+}
+
+public class LibraryFineReminder {
+
+    public static void main(String[] args) {
+
+        ReminderService reminder = new ReminderService() {
+            @Override
+            public void sendReminder(String studentName) {
+                System.out.println("Reminder: " + studentName + ", please pay your pending library fine.");
+            }
+        };
+
+        reminder.sendReminder("Sneha");
+    }
+}
