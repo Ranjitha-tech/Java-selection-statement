@@ -1,0 +1,18 @@
+interface GateController {
+    void openGate(String vehicleNumber);
+}
+
+public class SmartParkingGate {
+
+    public static void main(String[] args) {
+
+        GateController gate = new GateController() {
+            @Override
+            public void openGate(String vehicleNumber) {
+                System.out.println("Gate Opened for Vehicle : " + vehicleNumber);
+            }
+        };
+
+        gate.openGate("KA01AB4321");
+    }
+}
