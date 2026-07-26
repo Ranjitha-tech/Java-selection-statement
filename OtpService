@@ -1,0 +1,22 @@
+interface OTPService {
+    void verifyOTP(int otp);
+}
+
+public class BankingOTPVerification {
+
+    public static void main(String[] args) {
+
+        OTPService service = new OTPService() {
+            @Override
+            public void verifyOTP(int otp) {
+                if (otp == 2589) {
+                    System.out.println("OTP Verified Successfully.");
+                } else {
+                    System.out.println("Invalid OTP.");
+                }
+            }
+        };
+
+        service.verifyOTP(2589);
+    }
+}
