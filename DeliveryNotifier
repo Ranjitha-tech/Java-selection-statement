@@ -1,0 +1,18 @@
+interface DeliveryNotifier {
+    void notifyCustomer(String orderId);
+}
+
+public class FoodDeliveryNotification {
+
+    public static void main(String[] args) {
+
+        DeliveryNotifier notifier = new DeliveryNotifier() {
+            @Override
+            public void notifyCustomer(String orderId) {
+                System.out.println("Order " + orderId + " is out for delivery.");
+            }
+        };
+
+        notifier.notifyCustomer("FD2034");
+    }
+}
