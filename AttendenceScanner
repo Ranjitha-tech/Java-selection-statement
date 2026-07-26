@@ -1,0 +1,18 @@
+interface AttendanceScanner {
+    void scanEmployee(int employeeId);
+}
+
+public class OfficeAttendanceSystem {
+
+    public static void main(String[] args) {
+
+        AttendanceScanner scanner = new AttendanceScanner() {
+            @Override
+            public void scanEmployee(int employeeId) {
+                System.out.println("Attendance Marked for Employee ID : " + employeeId);
+            }
+        };
+
+        scanner.scanEmployee(1045);
+    }
+}
