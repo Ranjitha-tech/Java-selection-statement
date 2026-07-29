@@ -1,0 +1,17 @@
+interface Formatter {
+    String format(String text);
+}
+
+public class UsernameFormatter {
+
+    public static void main(String[] args) {
+
+        Formatter formatter = name ->
+                name.trim().toLowerCase().replace(" ", "_");
+
+        String username = "  Ranjitha Nagaraj  ";
+
+        System.out.println("Formatted Username : "
+                + formatter.format(username));
+    }
+}
