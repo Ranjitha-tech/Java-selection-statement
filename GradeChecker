@@ -1,0 +1,27 @@
+interface GradeChecker {
+    String evaluate(int marks);
+}
+
+public class StudentGradeEvaluator {
+
+    public static void main(String[] args) {
+
+        GradeChecker checker = marks -> {
+            if (marks >= 90)
+                return "Outstanding";
+            else if (marks >= 75)
+                return "Excellent";
+            else if (marks >= 60)
+                return "Good";
+            else if (marks >= 40)
+                return "Pass";
+            else
+                return "Fail";
+        };
+
+        int marks = 84;
+
+        System.out.println("Marks : " + marks);
+        System.out.println("Result : " + checker.evaluate(marks));
+    }
+}
