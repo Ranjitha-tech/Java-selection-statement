@@ -1,0 +1,23 @@
+interface TemperatureConverter {
+    double convert(double value);
+}
+
+public class SmartTemperatureConverter {
+    public static void main(String[] args) {
+
+        TemperatureConverter celsiusToFahrenheit =
+                c -> (c * 9 / 5) + 32;
+
+        TemperatureConverter fahrenheitToCelsius =
+                f -> (f - 32) * 5 / 9;
+
+        double celsius = 28;
+        double fahrenheit = 82.4;
+
+        System.out.println("Celsius to Fahrenheit : "
+                + celsiusToFahrenheit.convert(celsius));
+
+        System.out.println("Fahrenheit to Celsius : "
+                + fahrenheitToCelsius.convert(fahrenheit));
+    }
+}
