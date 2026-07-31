@@ -1,0 +1,25 @@
+public class CharacterCategoryCounter {
+
+    public static void main(String[] args) {
+
+        String text = "Java@2026#AI";
+
+        int letters = 0;
+        int digits = 0;
+        int symbols = 0;
+
+        for (char ch : text.toCharArray()) {
+
+            if (Character.isLetter(ch))
+                letters++;
+            else if (Character.isDigit(ch))
+                digits++;
+            else
+                symbols++;
+        }
+
+        System.out.println("Letters : " + letters);
+        System.out.println("Digits  : " + digits);
+        System.out.println("Symbols : " + symbols);
+    }
+}
